@@ -1,0 +1,51 @@
+/* ===== NAVBAR STYLES ===== */
+
+/* main nav container */
+#tooplate_menu {
+  width: 100%;
+  background-color: #3b141c;   /* dark maroon */
+  border-bottom: 1px solid black;
+}
+
+/* ul ko horizontal row banao */
+#tooplate_menu ul {
+  list-style: none;            /* bullets hatao */
+  margin: 0;
+  padding: 15px 0;             /* upar‑neeche spacing */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* har menu item */
+#tooplate_menu ul li {
+  font-size: 15px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+/* links ki default styling */
+#tooplate_menu ul li a {
+  text-decoration: none;
+  color: #ffffff;              /* white text */
+  transition: 0.3s ease;
+}
+
+/* current / active page link */
+#tooplate_menu ul li .current {
+  border-bottom: 2px solid #f3961c;
+}
+
+/* hover effect */
+#tooplate_menu ul li a:hover {
+  border-radius: 15px;
+  color: #3b141c;
+  padding: 5px 18px;
+  background-color: #f3961c;
+  display: block;
+}
+
+/* cleaner div agar use kar rahe ho */
+.cleaner {
+  clear: both;
+}

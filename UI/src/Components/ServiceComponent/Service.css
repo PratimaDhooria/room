@@ -1,0 +1,96 @@
+.services{
+  height: 800px;
+  background-image: linear-gradient(45deg,rgba(8,70,8,0.5),rgba(0,0,0,0.5));
+  padding-bottom: 3rem;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  padding-top: 1rem;
+}
+.Feature-services{
+  color: #F5F5DC;
+  font-family: "Great Vibes",cursive;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  padding-top: 3rem;
+  font-size: 4rem;
+}
+.offer{
+  color: #F5F5DC;
+  font-family:"Roboto",sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.row{
+  padding-bottom: 3rem;
+  display: flex;
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+  width: 1320px;
+}
+.col{
+  margin-bottom: 0;
+  flex: 0 0 auto;
+  width: 33.3333333%;
+  margin-top: 0;
+  max-width: 100%;
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+}
+.card{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #F5F5DC;
+  background-clip: border-box;
+  border: 2px solid rgba(0,0,0,0.175);
+  border-radius: 0.375rem;
+}
+.card-img{
+  border-top-left-radius: 1px;
+  border-bottom-right-radius: 1px;
+  width: 100%;
+  vertical-align: middle;
+  border-style: none;
+}
+.card-body{
+  flex: 1 1 auto;
+  padding: 1rem 1rem;
+  background-color: #F5F5DC;
+}
+.h2-body{
+  font-family: "segoe UI" Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  margin: 10px 0;
+  font-size: 30px;
+  line-height: 1.2;
+  color: #212529;
+}
+.p-body{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 15px;
+  margin: 0 0 15px;
+}
+.more{
+  cursor: pointer;
+  color: #F5F5DC;
+  background-color: #212529;
+  display: inline-block;
+  padding: 5.6px 11.25px;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid #00000000;
+  border-radius: 0.375rem;
+}
+.card-img1{
+  border-top-left-radius: 1px;
+  border-bottom-right-radius: 1px;
+  width: 100%;
+  height: 275px;
+  vertical-align: middle;
+  border-style: none;
+}

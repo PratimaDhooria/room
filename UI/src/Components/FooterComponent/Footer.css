@@ -1,0 +1,136 @@
+/* ===========================
+   FOOTER BASE
+   =========================== */
+.footer {
+  background-color: #3b0911;      /* dark background */
+  color: #ffffff;
+  font-family: "Poppins", sans-serif; 
+  margin-top: 40px;
+}
+
+/* Global footer links */
+.footer a {
+  color: #bfbfbf;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer a:hover {
+  color:#f4a623;                 /* warm accent like hero image */
+}
+
+/* ===========================
+   LAYOUT
+   =========================== */
+.footer-container {
+  max-width: 1200px;              /* same width as main content */
+  margin: 0 auto;
+  padding: 40px 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer-section {
+  flex: 1;
+}
+
+.footer-section h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.footer-section ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 6px;
+}
+
+/* ===========================
+   CONTACT INFO
+   =========================== */
+.contact-info {
+  cursor: default;               /* normal arrow */
+}
+
+.contact-info p {
+  margin: 4px 0;
+  font-size: 16px;               /* thoda bada text */
+  line-height: 1.4;
+  color: #f1f1f1;
+  font-style: normal;  
+  
+
+  
+
+}
+
+/* Contact ke andar jo link hai (phone) */
+.contact-info a {
+   color: #9b9b91; 
+   text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* ===========================
+   SOCIAL ICONS
+   =========================== */
+.social-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3b0911;   /* navbar / booking button type maroon */
+  color: #ffffff;
+  font-size: 15px;
+}
+
+.social-icons a:hover {
+  background-color: #f4a623;
+  color: #3b0911;
+}
+
+/* ===========================
+   BOTTOM STRIP
+   =========================== */
+.footer-bottom {
+  background-color: #3b0911;     /* maroon strip */
+  text-align: center;
+  padding: 10px 0;
+  font-size: 13px;
+  margin: 0;
+  color: #e0e0e0;
+}
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 24px;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}

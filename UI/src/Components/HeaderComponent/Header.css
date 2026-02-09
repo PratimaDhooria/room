@@ -1,0 +1,25 @@
+.container{
+
+   display: none;
+   background-color: rgb(247, 233, 233);
+    /* height: 80px; */
+   /* width: 100%;  */
+   justify-content:space-between;
+
+   align-items: center;
+    /* box-sizing: border-box;  */
+    border-bottom: 1px solid #b6b1b1; 
+
+}
+.imag{
+  width: 85px;
+  height: 85px;
+  margin-left: 80px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  border-radius: 20px;
+  border: 2px solid red ;
+}
+.h{
+  margin-right: 600px;
+}
