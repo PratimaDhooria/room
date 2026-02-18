@@ -39,11 +39,19 @@ function Footer() {
           <address className="contact-info">
             <p>Abhay Prasad B-wing</p>
             <p>Ground floor, Indore – 452003</p>
-            <p> <a herf="Email:pratimadhuriya000@gmail.com">pratimadhuriya000@gmail.com</a></p>
             <p>
-              📞 <a href="tel:+91975215505">+91 97521 5505</a>
+              📧{" "}
+              <a href="mailto:pratimadhuriya000@gmail.com">
+                pratimadhuriya000@gmail.com
+              </a>
             </p>
-             </address>
+            <p>
+              📞{" "}
+              <a href="tel:+91975215505">
+                +91 97521 5505
+              </a>
+            </p>
+          </address>
         </div>
 
         {/* SOCIAL ICONS */}
