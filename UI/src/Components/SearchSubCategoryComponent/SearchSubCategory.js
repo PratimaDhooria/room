@@ -1,64 +1,53 @@
-import './SearchSubCategory.css';
-import axios from 'axios';
-import { useState , useEffect } from 'react';
-import { __subcategoryapiurl , __categoryapiurl , __userapiurl } from '../../Api.url';
-import { Link , useParams } from 'react-router-dom';
+import "./SearchSubCategory.css";
+import axios from "axios";
+import { useState, useEffect } from "react";
+import { __subcategoryapiurl } from "../../Api.url";
+import { useParams, Link } from "react-router-dom";
 
 function SearchSubCategory() {
+  const { catnm } = useParams();
 
-  const params = useParams();
-  const [ scList , setSubCatList ] = useState([]);    
+  const [scDetails, setSubCategoryDetails] = useState([]);
 
-  useEffect(()=>{
-    axios.get(__subcategoryapiurl+"fetch",{
-        params :  {"catnm":params.catnm} 
-    }).then((response)=>{
-        setSubCatList(response.data);
-    }).catch((error)=>{
-        console.log(error);        
-    });  
-  },[]);
-
-  /*useEffect(()=>{
-    axios.get(__categoryapiurl+"fetch").then((response)=>{
-      setCategoryDetails(response.data);
-    }).catch((error)=>{
-      console.log(error);        
-    });        
-  });*/
+  useEffect(() => {
+    axios
+      .get(__subcategoryapiurl + "fetch", {
+        params: { catnm: catnm },
+      })
+      .then((response) => {
+        setSubCategoryDetails(response.data || []);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, [catnm]); // ✅ dependency fixed
 
   return (
-  <>  
-  <div id="tooplate_content">
+    <div id="tooplate_content">
+      <div className="content_box content_box_last">
+        <h2>Search Sub Category &gt;&gt;</h2>
 
-<div class="content_box content_box_last">
-  <h2>Sub Category For Rental Property &gt;&gt; {params.catnm} </h2>
-
-  <center>  
-  <div id="catmain" >
-  { 
-    scList.map((row)=>(
-      <Link to={`/searchsc/${row.catnm}`} >
-      <div class="catpart" >
-        <img src={`../assets/uploads/subcategoryicons/${row.subcaticonnm}`} height={120} width={150} />
-        <br/>
-        <b>{row.subcatnm}</b>
+        <div id="scmain">
+          {scDetails.map((row) => (
+            <Link key={row._id} to={`/searchproperty/${row.subcatnm}`}>
+              <div className="scpart">
+                <img
+                  src={`assets/uploads/subcategoryicons/${row.subcaticonnm}`}
+                  height={120}
+                  width={150}
+                  alt={row.subcatnm}
+                />
+                <br />
+                <b>{row.subcatnm}</b>
+              </div>
+            </Link>
+          ))}
+        </div>
       </div>
-      </Link>
-    ))
-  }
-  </div>    
-  </center>
 
-</div>
-
-<div class="cleaner"></div>
-</div>
-  </>
+      <div className="cleaner"></div>
+    </div>
   );
 }
 
 export default SearchSubCategory;
-
-
-
