@@ -54,4 +54,37 @@ function AdminContact() {
           </thead>
 
           <tbody>
-            {c
+            {contacts.length === 0 ? (
+              <tr>
+                <td colSpan="6" style={{ textAlign: "center" }}>
+                  No contact data found
+                </td>
+              </tr>
+            ) : (
+              contacts.map((row, index) => (
+                <tr key={row._id}>
+                  <td>{index + 1}</td>
+                  <td>{row.name}</td>
+                  <td>{row.email}</td>
+                  <td>{row.phone}</td>
+                  <td>{row.message}</td>
+                  <td>
+                    <span
+                      style={{ color: "red", cursor: "pointer" }}
+                      onClick={() => deleteContact(row._id)}
+                    >
+                      DELETE
+                    </span>
+                  </td>
+                </tr>
+              ))
+            )}
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+  );
+}
+
+export default AdminContact;
