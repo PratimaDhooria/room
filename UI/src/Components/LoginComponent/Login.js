@@ -28,7 +28,7 @@ function Login() {
       localStorage.setItem("role",userDetails.role);
       localStorage.setItem("info",userDetails.info);
 
-      (userDetails.role=="admin")?navigate("/admin"):navigate("/user");
+      (userDetails.role==="admin")?navigate("/admin"):navigate("/user");
 
     }).catch((err)=>{
       setOutput("Invalid user or verify your account....");
