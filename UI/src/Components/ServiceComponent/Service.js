@@ -13,8 +13,9 @@ function Service() {
         <div className='row'>
           <div className='col'>
             <div className='card'>
-              <img className='card-img' src='./assets/images/download.jpeg'></img>
-              <div className='card-body'>
+              <img src="./assets/images/service1.jpg" alt="Service 1" />
+
+               <div className='card-body'>
                 <h2 className='h2-body'>2BHK Flat for Rent in indore </h2>
                 <p className='p-body'>
                    Rental 2BHK Apartments in indore : Rent RS 8,999
